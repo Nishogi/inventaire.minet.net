@@ -13,21 +13,22 @@ MiNET student network association
 
 ### Equipment
 
-| property      | type   | constraints | comment     |
-| ------------- | ------ | ----------- | ----------- |
-| description   | String | notNull     |             |
-| serialNumber  | String | notNull     |             |
-| brand         | String | notNull     |             |
-| model         | String | notNull     |             |
-| type          | String | notNull     |             |
-| macAddress    | String | notNull     |             |
-| ipAddress     | String | notNull     |             |
-| hostname      | String | notNull     |             |
-| os            | String | notNull     |             |
-| osVersion     | String | notNull     |             |
+| property     | type   | constraints | comment                                                                |
+|--------------|--------|-------------|------------------------------------------------------------------------|
+| serialNumber | String | notNull     | primary key                                                            |
+| type         | String | notNull     | options: switch, router, cable, server, computer, printer, screen, ... |
+| brand        | String | notNull     | useful ? network devices are mainly cisco                              |
+| model        | String | notNull     |                                                                        |
+| isWorking    | Bool   | notNull     |                                                                        |
+| inUse        | Bool   | notNull     |                                                                        |
+| macAddress   | String | notNull     | if network device                                                      |
+| ipAddress    | String | notNull     | if network device in use                                               |
+| description  | String | notNull     |                                                                        |
 
 
 ### Storage
+
+ --> correspond to the "bagagerie" in the MiNET jargon
 
 | property      | type   | constraints | comment     |
 | ------------- | ------ | ----------- | ----------- |
@@ -37,8 +38,9 @@ MiNET student network association
 
 | property      | type   | constraints | comment     |
 | ------------- | ------ | ----------- | ----------- |
+| number        | String | notNull     |             |
 | description   | String | notNull     |             |
 
 ### Relations
 
-[inventaire] (1) — (0..n) [objet] : OneToMany (un [inventaire] contient 0 à n [objet])
+storage (1) — (0..n) equipment : OneToMany (one [inventaire] contient 0 à n [objet])
