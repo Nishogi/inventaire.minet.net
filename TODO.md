@@ -5,9 +5,9 @@
 
 | N° étape | Tâche à faire                                                                                           | Obligatoire / Optionnel | Séance de début prévisionnel | État |
 |----------|---------------------------------------------------------------------------------------------------------|-------------------------|------------------------------|------|
-| 1        | Prise de connaissance du cahier des charges                                                             | OBLIGATOIRE             | TP 3                         |  ❌   |
-| 2        | Initialisation du projet Symfony                                                                        | OBLIGATOIRE             | TP 3                         |  ❌   |
-| 3        | Gestion du code source avec Git                                                                         | RECOMMANDÉ              |                              |  ❌   |
+| 1        | Prise de connaissance du cahier des charges                                                             | OBLIGATOIRE             | TP 3                         |  ✅   |
+| 2        | Initialisation du projet Symfony                                                                        | OBLIGATOIRE             | TP 3                         |  ✅   |
+| 3        | Gestion du code source avec Git                                                                         | RECOMMANDÉ              |                              |  ✅   |
 | 4        | Ajout au modèle des données des entités liées [inventaire] et [objet] minimales                         | OBLIGATOIRE             | TP 3                         |  ❌   |
 | 4.1      | - Entité [inventaire]                                                                                   | ''                      | ''                           |  ❌   |
 | 4.2      | - Entité [objet]                                                                                        | ''                      | ''                           |  ❌   |
