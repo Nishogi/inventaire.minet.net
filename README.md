@@ -21,8 +21,9 @@ MiNET student network association
 | model        | String | notNull     |                                                                        |
 | isWorking    | Bool   | notNull     |                                                                        |
 | inUse        | Bool   | notNull     |                                                                        |
-| macAddress   | String | notNull     | if network device                                                      |
-| ipAddress    | String | notNull     | if network device in use                                               |
+| macAddress   | String | none        | if network device                                                      |
+| ipv4         | String | none        | if network device in use                                               |
+| ipv6         | String | none        | if network device in use and uses ipv6                                 |
 | description  | String | notNull     |                                                                        |
 
 
@@ -38,7 +39,7 @@ MiNET student network association
 
 | property      | type   | constraints | comment     |
 | ------------- | ------ | ----------- | ----------- |
-| number        | String | notNull     |             |
+| number        | String | notNull     | primaryKey  |
 | description   | String | notNull     |             |
 
 ### Relations
