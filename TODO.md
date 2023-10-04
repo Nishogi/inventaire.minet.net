@@ -8,10 +8,10 @@
 | 1        | Prise de connaissance du cahier des charges                                                             | OBLIGATOIRE             | TP 3                         |  ✅   |
 | 2        | Initialisation du projet Symfony                                                                        | OBLIGATOIRE             | TP 3                         |  ✅   |
 | 3        | Gestion du code source avec Git                                                                         | RECOMMANDÉ              |                              |  ✅   |
-| 4        | Ajout au modèle des données des entités liées [inventaire] et [objet] minimales                         | OBLIGATOIRE             | TP 3                         |  ❌   |
+| 4        | Ajout au modèle des données des entités liées [inventaire] et [objet] minimales                         | OBLIGATOIRE             | TP 3                         |  ✅   |
 | 4.1      | - Entité [inventaire]                                                                                   | ''                      | ''                           |  ✅   |
-| 4.2      | - Entité [objet]                                                                                        | ''                      | ''                           |  ❌   |
-| 4.3      | - Association 1-N entre [inventaire] et [objet]                                                         | ''                      | ''                           |  ❌   |
+| 4.2      | - Entité [objet]                                                                                        | ''                      | ''                           |  ✅   |
+| 4.3      | - Association 1-N entre [inventaire] et [objet]                                                         | ''                      | ''                           |  ✅   |
 | 4.4      | - Propriétés non-essentielles des [objets] (optionnel)                                                  | OPTIONNEL               | (en 2ème moitié de projet)   |  ❌   |
 | 5        | Ajout de données de tests chargeables avec les fixtures                                                 | OBLIGATOIRE             | TP 3                         |  ❌   |
 |          | - Pour [inventaire]                                                                                     |                         |                              |  ❌   |
