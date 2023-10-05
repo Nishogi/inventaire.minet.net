@@ -6,41 +6,44 @@ MiNET student network association
 ## Description
 
 | *[general]*   | specific  |
-| ------------- | --------- |
+|---------------|-----------|
 | *[object]*    | equipment |
-| *[inventory]* | storage   |
-| *[galery]*    | room      |
+| *[inventory]* | room      |
+| *[galery]*    | cluster   |
 
 ### Equipment
 
-| property     | type   | constraints | comment                                                                |
-|--------------|--------|-------------|------------------------------------------------------------------------|
-| serialNumber | String | notNull     | primary key                                                            |
-| type         | String | notNull     | options: switch, router, cable, server, computer, printer, screen, ... |
-| brand        | String | notNull     | useful ? network devices are mainly cisco                              |
-| model        | String | notNull     |                                                                        |
-| isWorking    | Bool   | notNull     |                                                                        |
-| inUse        | Bool   | notNull     |                                                                        |
-| macAddress   | String | none        | if network device                                                      |
-| ipv4         | String | none        | if network device in use                                               |
-| ipv6         | String | none        | if network device in use and uses ipv6                                 |
-| description  | String | notNull     |                                                                        |
+TBA <-> To Be Added
 
+| property         | type   | constraints | comment                                                                |
+|------------------|--------|-------------|------------------------------------------------------------------------|
+| serialNumber     | String | notNull     |                                                                        |
+| name             | String | notNull     |                                                                        |
+| type             | String | notNull     | options: switch, router, cable, server, computer, printer, screen, ... |
+| brand (TBA)      | String | notNull     | useful ? network devices are mainly cisco                              |
+| model (TBA)      | String | notNull     |                                                                        |
+| isWorking        | Bool   | notNull     |                                                                        |
+| inUse (TBA)      | Bool   | notNull     |                                                                        |
+| macAddress (TBA) | String | none        | if network device                                                      |
+| ipv4    (TBA)    | String | none        | if network device in use                                               |
+| ipv6   (TBA)     | String | none        | if network device in use and uses ipv6                                 |
+| description      | String | notNull     |                                                                        |
 
-### Storage
-
- --> correspond to the "bagagerie" in the MiNET jargon
-
-| property      | type   | constraints | comment     |
-| ------------- | ------ | ----------- | ----------- |
-| description   | String | notNull     |             |
 
 ### Room
 
-| property      | type   | constraints | comment     |
-| ------------- | ------ | ----------- | ----------- |
-| number        | String | notNull     | primaryKey  |
-| description   | String | notNull     |             |
+| property    | type   | constraints | comment |
+|-------------|--------|-------------|---------|
+| number      | String | notNull     |         |
+| name        | String | notNull     |         |
+| description | String | notNull     |         |
+
+### Cluster
+
+| property    | type   | constraints | comment |
+|-------------|--------|-------------|---------|
+| access      | String | notNull     |         |
+| description | String | notNull     |         |
 
 ### Relations
 
