@@ -5,6 +5,9 @@ namespace App\DataFixtures;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
+use App\Entity\Room;
+use App\Entity\Equipment;
+
 
 class AppFixtures extends Fixture
 {
@@ -48,6 +51,7 @@ class AppFixtures extends Fixture
 
         foreach (self::roomDataGenerator() as [$description, $roomReference]) {
             $room = new Room();
+            $room->setName($roomReference);
             $room->setDescription($description);
             $manager->persist($room);
             $manager->flush();

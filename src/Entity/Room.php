@@ -21,7 +21,7 @@ class Room
     #[ORM\Column(length: 255)]
     private ?string $description = null;
 
-    #[ORM\OneToMany(mappedBy: 'room', targetEntity: equipment::class, orphanRemoval: true)]
+    #[ORM\OneToMany(mappedBy: 'room', targetEntity: equipment::class, orphanRemoval: true, cascade: ['persist'])]
     private Collection $equipment;
 
     public function __construct()
