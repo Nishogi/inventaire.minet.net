@@ -19,19 +19,23 @@ class AppFixtures extends Fixture
     {
         yield ["Grande salle de stockage localisée au sous-sol du foyer", self::BAGAGERIE];
         yield ["Notre bien-aimé (trop petit) local qui mériterait bien une rénovation (et une extension)", self::LOCAL];
-        yield ["Salle serveur du foyer", self::SALLE_SERVEUR_FOYER];
-        yield ["Salle serveur du bâtiment U1, au rez-de-chaussée", self::SALLE_SERVEUR_U1];
+        yield ["Salle serveur du foyer, la plupart de nos serveurs y sont en activité", self::SALLE_SERVEUR_FOYER];
+        yield ["Salle serveur au RDC du U1 où sont stockés notre routeur et quelques serveurs", self::SALLE_SERVEUR_U1];
     }
 
     /**
      * Generates initialization data for equipment :
      * @return \\Generator
      */
-    private static function guitarsGenerator()
+    private static function equipmentDataGenerator()
     {
-        yield [self::OLIVIER_RACK_1, "Epiphone SG Special P-90"];
-        yield [self::OLIVIER_RACK_1, "Ibanez SA360NQM"];
-        yield [self::SLASH_RACK_1, "Gibson Les Paul 1960"];
+        yield [self::BAGAGERIE, "Tonnelle 3x3", "Location", "Tente de réception 3m x 3m"];
+        yield [self::BAGAGERIE, "Tonnelle 3x6", "Location", "Tente de réception 3m x 6m"];
+        yield [self::LOCAL, "Testeur de câbles", "Outils", "Testeur de câbles RJ45"];
+        yield [self::SALLE_SERVEUR_FOYER, "Sirius", "Serveur", "Serveur de production"];
+        yield [self::SALLE_SERVEUR_U1, "Vega", "Serveur", "Serveur de production"];
+        yield [self::SALLE_SERVEUR_U1, "Routeur MiNET", "Routeur", "Routeur central de MiNET"];
+
     }
 
     public function load(ObjectManager $manager)
