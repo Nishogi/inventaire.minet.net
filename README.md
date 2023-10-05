@@ -36,6 +36,7 @@ TBA <-> To Be Added
 |-------------|--------|-------------|---------|
 | number      | String | notNull     |         |
 | name        | String | notNull     |         |
+| area        | String | notNull     |         |
 | description | String | notNull     |         |
 
 ### Cluster
