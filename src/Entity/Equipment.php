@@ -13,8 +13,8 @@ class Equipment
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 8)]
-    private ?string $serialNumber = null;
+    // #[ORM\Column(length: 8)]
+    // private ?string $serialNumber = null;
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
@@ -34,17 +34,17 @@ class Equipment
         return $this->id;
     }
 
-    public function getSerialNumber(): ?string
-    {
-        return $this->serialNumber;
-    }
+    // public function getSerialNumber(): ?string
+    // {
+    //     return $this->serialNumber;
+    // }
 
-    public function setSerialNumber(string $serialNumber): static
-    {
-        $this->serialNumber = $serialNumber;
+    // public function setSerialNumber(string $serialNumber): static
+    // {
+    //     $this->serialNumber = $serialNumber;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     public function getName(): ?string
     {

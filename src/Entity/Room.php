@@ -15,14 +15,8 @@ class Room
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column]
-    private ?int $number = null;
-
     #[ORM\Column(length: 255)]
     private ?string $name = null;
-
-    #[ORM\Column]
-    private ?int $area = null;
 
     #[ORM\Column(length: 255)]
     private ?string $description = null;
@@ -40,18 +34,6 @@ class Room
         return $this->id;
     }
 
-    public function getNumber(): ?int
-    {
-        return $this->number;
-    }
-
-    public function setNumber(int $number): static
-    {
-        $this->number = $number;
-
-        return $this;
-    }
-
     public function getName(): ?string
     {
         return $this->name;
@@ -60,18 +42,6 @@ class Room
     public function setName(string $name): static
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getArea(): ?int
-    {
-        return $this->area;
-    }
-
-    public function setArea(int $area): static
-    {
-        $this->area = $area;
 
         return $this;
     }
