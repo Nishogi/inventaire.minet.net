@@ -15,19 +15,19 @@ MiNET student network association
 
 TBA <-> To Be Added
 
-| property         | type   | constraints | comment                                                                |
-|------------------|--------|-------------|------------------------------------------------------------------------|
-| serialNumber     | String | notNull     |                                                                        |
-| name             | String | notNull     |                                                                        |
-| type             | String | notNull     | options: switch, router, cable, server, computer, printer, screen, ... |
-| brand (TBA)      | String | notNull     | useful ? network devices are mainly cisco                              |
-| model (TBA)      | String | notNull     |                                                                        |
-| isWorking        | Bool   | notNull     |                                                                        |
-| inUse (TBA)      | Bool   | notNull     |                                                                        |
-| macAddress (TBA) | String | none        | if network device                                                      |
-| ipv4    (TBA)    | String | none        | if network device in use                                               |
-| ipv6   (TBA)     | String | none        | if network device in use and uses ipv6                                 |
-| description      | String | notNull     |                                                                        |
+| property           | type   | constraints | comment                                                                |
+|--------------------|--------|-------------|------------------------------------------------------------------------|
+| serialNumber (TBA) | String | notNull     |                                                                        |
+| name               | String | notNull     |                                                                        |
+| type               | String | notNull     | options: switch, router, cable, server, computer, printer, screen, ... |
+| brand (TBA)        | String | notNull     | useful ? network devices are mainly cisco                              |
+| model (TBA)        | String | notNull     |                                                                        |
+| isWorking (TBA)    | Bool   | notNull     |                                                                        |
+| inUse (TBA)        | Bool   | notNull     |                                                                        |
+| macAddress (TBA)   | String | none        | if network device                                                      |
+| ipv4    (TBA)      | String | none        | if network device in use                                               |
+| ipv6   (TBA)       | String | none        | if network device in use and uses ipv6                                 |
+| description        | String | notNull     |                                                                        |
 
 
 ### Room
