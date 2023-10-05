@@ -11,19 +11,20 @@ class AppFixtures extends Fixture
     private const SALLE_SERVEUR_U1 = 'salle serveur U1';
 
     /**
-     * Generates initialization data for rooms : [title]
+     * Generates initialization data for rooms :
      * @return \\Generator
      */
 
     private static function roomDataGenerator()
     {
-        yield [0
-        yield ["400 guitars collection", self::SLASH_RACK_1];
+        yield ["Grande salle de stockage localisée au sous-sol du foyer", self::BAGAGERIE];
+        yield ["Notre bien-aimé (trop petit) local qui mériterait bien une rénovation (et une extension)", self::LOCAL];
+        yield ["Salle serveur du foyer", self::SALLE_SERVEUR_FOYER];
+        yield ["Salle serveur du bâtiment U1, au rez-de-chaussée", self::SALLE_SERVEUR_U1];
     }
 
     /**
-     * Generates initialization data for film recommendations:
-     *  [film_title, film_year, recommendation]
+     * Generates initialization data for equipment :
      * @return \\Generator
      */
     private static function guitarsGenerator()

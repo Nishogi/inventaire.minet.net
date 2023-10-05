@@ -34,9 +34,7 @@ TBA <-> To Be Added
 
 | property    | type   | constraints | comment |
 |-------------|--------|-------------|---------|
-| number      | String | notNull     |         |
 | name        | String | notNull     |         |
-| area        | String | notNull     |         |
 | description | String | notNull     |         |
 
 ### Cluster
