@@ -2,6 +2,10 @@
 
 namespace App\DataFixtures;
 
+use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Persistence\ObjectManager;
+
+
 class AppFixtures extends Fixture
 {
     // defines reference names for instances of Rooms
