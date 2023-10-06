@@ -33,5 +33,6 @@ class InventaireController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Equipment', 'fas fa-list', Equipment::class);
+        yield MenuItem::linkToCrud('Room', 'fas fa-list', Room::class);
     }
 }
