@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\MemberRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: MemberRepository::class)]
@@ -24,6 +26,14 @@ class Member
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $description = null;
+
+    #[ORM\ManyToMany(targetEntity: room::class, inversedBy: 'members')]
+    private Collection $room;
+
+    public function __construct()
+    {
+        $this->room = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -74,6 +84,30 @@ class Member
     public function setDescription(?string $description): static
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, room>
+     */
+    public function getRoom(): Collection
+    {
+        return $this->room;
+    }
+
+    public function addRoom(room $room): static
+    {
+        if (!$this->room->contains($room)) {
+            $this->room->add($room);
+        }
+
+        return $this;
+    }
+
+    public function removeRoom(room $room): static
+    {
+        $this->room->removeElement($room);
 
         return $this;
     }

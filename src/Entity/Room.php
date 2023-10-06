@@ -24,9 +24,13 @@ class Room
     #[ORM\OneToMany(mappedBy: 'room', targetEntity: equipment::class, orphanRemoval: true, cascade: ['persist'])]
     private Collection $equipment;
 
+    #[ORM\ManyToMany(targetEntity: Member::class, mappedBy: 'room')]
+    private Collection $members;
+
     public function __construct()
     {
         $this->equipment = new ArrayCollection();
+        $this->members = new ArrayCollection();
     }
 
     public function __toString(): string
@@ -88,6 +92,33 @@ class Room
             if ($equipment->getRoom() === $this) {
                 $equipment->setRoom(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Member>
+     */
+    public function getMembers(): Collection
+    {
+        return $this->members;
+    }
+
+    public function addMember(Member $member): static
+    {
+        if (!$this->members->contains($member)) {
+            $this->members->add($member);
+            $member->addRoom($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMember(Member $member): static
+    {
+        if ($this->members->removeElement($member)) {
+            $member->removeRoom($this);
         }
 
         return $this;
