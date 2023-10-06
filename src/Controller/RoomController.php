@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 use Doctrine\Persistence\ManagerRegistry;
 
+use App\Entity\Equipment;
 use App\Entity\Room;
 
 class RoomController extends AbstractController
