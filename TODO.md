@@ -25,13 +25,13 @@
 |          | - Ajout de membre au modèle des données                                                                 |                         |                              |  ✅   |
 |          | - Ajout de l'association 1-N entre membre et ses inventaires (optionnellement 1-1)                      |                         |                              |  ✅   |
 | 8        | Création des pages du "front-office" de consultation des [inventaires]                                  |                         |                              |  ❌   |
-|          | - Consultation de la liste de tous les inventaires (dans un premier temps)                              | OBLIGATOIRE             | TP 4                         |  ❌   |
-|          | - Consultation d'une fiche d'[inventaire] à partir de la liste                                          | OBLIGATOIRE             | TP 4                         |  ❌   |
-| 9        | Ajout de la navigation entre [inventaire] et [objet] dans le back-office EasyAdmin                      | OPTIONNEL               | TP 4/5                       |  ❌   |
-| 10       | Utilisation de gabarits pour les pages de consultation du front-office                                  | OBLIGATOIRE             | TP 5                         |  ❌   |
-|          | - Consultation d'un [objet]                                                                             |                         |                              |  ❌   |
-|          | - Consultation de la liste des [objets] d'un [inventaire]                                               |                         |                              |  ❌   |
-|          | - Navigation d'un [inventaire] vers la consultation de ses [objets]                                     |                         |                              |  ❌   |
+|          | - Consultation de la liste de tous les inventaires (dans un premier temps)                              | OBLIGATOIRE             | TP 4                         |  ✅   |
+|          | - Consultation d'une fiche d'[inventaire] à partir de la liste                                          | OBLIGATOIRE             | TP 4                         |  ✅   |
+| 9        | Ajout de la navigation entre [inventaire] et [objet] dans le back-office EasyAdmin                      | OPTIONNEL               | TP 4/5                       |  ✅   |
+| 10       | Utilisation de gabarits pour les pages de consultation du front-office                                  | OBLIGATOIRE             | TP 5                         |  ✅   |
+|          | - Consultation d'un [objet]                                                                             |                         |                              |  ✅   |
+|          | - Consultation de la liste des [objets] d'un [inventaire]                                               |                         |                              |  ✅   |
+|          | - Navigation d'un [inventaire] vers la consultation de ses [objets]                                     |                         |                              |  ✅   |
 | 11       | Intégration d'une mise en forme CSS avec Bootstrap dans les gabarits Twig                               | OBLIGATOIRE             | TP 6                         |  ❌   |
 | 12       | Intégration de menus de navigation                                                                      | OBLIGATOIRE             |                              |  ❌   |
 | 13       | Ajout de l'entité [galerie] au modèle des données et de l'association M-N avec [objet]                  | OBLIGATOIRE             |                              |  ❌   |

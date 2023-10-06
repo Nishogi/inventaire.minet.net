@@ -46,4 +46,7 @@ TBA <-> To Be Added
 
 ### Relations
 
-storage (1) — (0..n) equipment : OneToMany (one [inventaire] contient 0 à n [objet])
+room (1) — (0..n) equipment : OneToMany (one room contient 0 à n equipements)
+member (0..n) — (0..n) room : ManyToMany (0 à n members contient 0 à n room)
+
+> Correspond aux accès des différentes salles (par exemple salle serveur accessible par certains membres seulement et bagagerie par tout le monde). Il y a plusieurs salles accessibles pour un membre et une salle est accessible par plusieurs membres.
