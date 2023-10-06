@@ -7,6 +7,7 @@ use Doctrine\Persistence\ObjectManager;
 
 use App\Entity\Room;
 use App\Entity\Equipment;
+use App\Entity\Member;
 
 
 class AppFixtures extends Fixture
@@ -17,6 +18,11 @@ class AppFixtures extends Fixture
     private const SALLE_SERVEUR_FOYER = 'salle serveur foyer';
     private const SALLE_SERVEUR_U1 = 'salle serveur U1';
 
+    // defines reference names for instances of Members
+    private const NISHOGI = 'nishogi';
+    private const BALMINE = 'balmine';
+    private const DIRESHAW = 'direshaw';
+
     /**
      * Generates initialization data for rooms :
      * @return \\Generator
@@ -24,10 +30,10 @@ class AppFixtures extends Fixture
 
     private static function roomDataGenerator()
     {
-        yield ["Grande salle de stockage localisée au sous-sol du foyer", self::BAGAGERIE];
-        yield ["Notre bien-aimé (trop petit) local qui mériterait bien une rénovation (et une extension)", self::LOCAL];
-        yield ["Salle serveur du foyer, la plupart de nos serveurs y sont en activité", self::SALLE_SERVEUR_FOYER];
-        yield ["Salle serveur au RDC du U1 où sont stockés notre routeur et quelques serveurs", self::SALLE_SERVEUR_U1];
+        yield [self::NISHOGI, "Grande salle de stockage localisée au sous-sol du foyer", self::BAGAGERIE];
+        yield [self::NISHOGI, "Notre bien-aimé (trop petit) local qui mériterait bien une rénovation (et une extension)", self::LOCAL];
+        yield [self::BALMINE, "Salle serveur du foyer, la plupart de nos serveurs y sont en activité", self::SALLE_SERVEUR_FOYER];
+        yield [self::DIRESHAW, "Salle serveur au RDC du U1 où sont stockés notre routeur et quelques serveurs", self::SALLE_SERVEUR_U1];
     }
 
     /**
@@ -43,6 +49,17 @@ class AppFixtures extends Fixture
         yield [self::SALLE_SERVEUR_U1, "Vega", "Serveur", "Serveur de production"];
         yield [self::SALLE_SERVEUR_U1, "Routeur MiNET", "Routeur", "Routeur central de MiNET"];
 
+    }
+
+    /**
+     * Generates initialization data for members :
+     * @return \\Generator
+     */
+    private static function memberDataGenerator()
+    {
+        yield ["nishogi", "Nicolas", "Rocq"];
+        yield ["balmine", "Tom", "Burellier"];
+        yield ["direshaw", "Baptiste", "Legros"];
     }
 
     public function load(ObjectManager $manager)
@@ -75,6 +92,15 @@ class AppFixtures extends Fixture
             // Requir that the ORM\OneToMany attribute on Room::equipment has "cascade: ['persist']"
             $manager->persist($room);
         }
+
+        foreach (self::memberDataGenerator() as [$ldap, $firstName, $lastName]) {
+            $member = new Member();
+            $member->setldap($ldap);
+            $member->setFirstName($firstName);
+            $member->setLastName($lastName);
+            $manager->persist($member);
+        }
+
         $manager->flush();
     }
 }
