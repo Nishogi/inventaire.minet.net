@@ -21,9 +21,9 @@
 |          | - CRUD [inventaire]                                                                                     | OBLIGATOIRE             | TP 3/4                       |  ✅   |
 |          | - CRUD [objet]                                                                                          | OBLIGATOIRE             | TP 3/4                       |  ✅   |
 |          | - Navigation entre [inventaire] et ses [objets] (optionnel)                                             | OPTIONNEL               | TP 5                         |  ✅   |
-| 7        | Ajout de l'entité membre et du lien membre - [inventaire]                                               | OBLIGATOIRE             | TP 3/4                       |  ❌   |
-|          | - Ajout de membre au modèle des données                                                                 |                         |                              |  ❌   |
-|          | - Ajout de l'association 1-N entre membre et ses inventaires (optionnellement 1-1)                      |                         |                              |  ❌   |
+| 7        | Ajout de l'entité membre et du lien membre - [inventaire]                                               | OBLIGATOIRE             | TP 3/4                       |  ✅   |
+|          | - Ajout de membre au modèle des données                                                                 |                         |                              |  ✅   |
+|          | - Ajout de l'association 1-N entre membre et ses inventaires (optionnellement 1-1)                      |                         |                              |  ✅   |
 | 8        | Création des pages du "front-office" de consultation des [inventaires]                                  |                         |                              |  ❌   |
 |          | - Consultation de la liste de tous les inventaires (dans un premier temps)                              | OBLIGATOIRE             | TP 4                         |  ❌   |
 |          | - Consultation d'une fiche d'[inventaire] à partir de la liste                                          | OBLIGATOIRE             | TP 4                         |  ❌   |

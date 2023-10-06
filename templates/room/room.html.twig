@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ room_name }} {% endblock %}
+
+
+{% block body %}
+   <a href="/room">Liste des salles</a>
+
+    <h1>{{ room_name }}</h1>
+
+    {% for equipment in equipments %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ equipment.name }}</h5>
+                <p class="card-text">{{ equipment.description }}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}

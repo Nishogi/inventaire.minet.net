@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Liste des salles de stockage{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Les différentes salles sont :</h1>
+    <ul>
+        {% for salle in rooms %}
+            <li> <a href="/room/{{ salle.id }}">{{ salle.name }}</li>
+        {% endfor %}
+
+
+</div>
+{% endblock %}

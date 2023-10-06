@@ -26,11 +26,16 @@ class Equipment
     #[ORM\JoinColumn(nullable: false)]
     private ?Room $room = null;
 
+    public function __toString(): string
+    {
+        return $this->name;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
     }
-    
+
     public function getName(): ?string
     {
         return $this->name;
