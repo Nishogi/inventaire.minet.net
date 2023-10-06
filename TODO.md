@@ -12,15 +12,15 @@
 | 4.1      | - Entité [inventaire]                                                                                   | ''                      | ''                           |  ✅   |
 | 4.2      | - Entité [objet]                                                                                        | ''                      | ''                           |  ✅   |
 | 4.3      | - Association 1-N entre [inventaire] et [objet]                                                         | ''                      | ''                           |  ✅   |
-| 4.4      | - Propriétés non-essentielles des [objets] (optionnel)                                                  | OPTIONNEL               | (en 2ème moitié de projet)   |  ❌   |
-| 5        | Ajout de données de tests chargeables avec les fixtures                                                 | OBLIGATOIRE             | TP 3                         |  ❌   |
-|          | - Pour [inventaire]                                                                                     |                         |                              |  ❌   |
-|          | - Pour [objet]                                                                                          |                         |                              |  ❌   |
-|          | - …                                                                                                     |                         |                              |  ❌   |
-| 6        | Ajout d'une interface EasyAdmin dans le back-office avec les 2 contrôleurs CRUD [inventaire] et [objet] |                         |                              |  ❌   |
-|          | - CRUD [inventaire]                                                                                     | OBLIGATOIRE             | TP 3/4                       |  ❌   |
-|          | - CRUD [objet]                                                                                          | OBLIGATOIRE             | TP 3/4                       |  ❌   |
-|          | - Navigation entre [inventaire] et ses [objets] (optionnel)                                             | OPTIONNEL               | TP 5                         |  ❌   |
+| 4.4      | - Propriétés non-essentielles des [objets] (optionnel)                                                  | OPTIONNEL               | (en 2ème moitié de projet)   |  ✅   |
+| 5        | Ajout de données de tests chargeables avec les fixtures                                                 | OBLIGATOIRE             | TP 3                         |  ✅   |
+|          | - Pour [inventaire]                                                                                     |                         |                              |  ✅   |
+|          | - Pour [objet]                                                                                          |                         |                              |  ✅   |
+|          | - …                                                                                                     |                         |                              |  ✅   |
+| 6        | Ajout d'une interface EasyAdmin dans le back-office avec les 2 contrôleurs CRUD [inventaire] et [objet] |                         |                              |  ✅   |
+|          | - CRUD [inventaire]                                                                                     | OBLIGATOIRE             | TP 3/4                       |  ✅   |
+|          | - CRUD [objet]                                                                                          | OBLIGATOIRE             | TP 3/4                       |  ✅   |
+|          | - Navigation entre [inventaire] et ses [objets] (optionnel)                                             | OPTIONNEL               | TP 5                         |  ✅   |
 | 7        | Ajout de l'entité membre et du lien membre - [inventaire]                                               | OBLIGATOIRE             | TP 3/4                       |  ❌   |
 |          | - Ajout de membre au modèle des données                                                                 |                         |                              |  ❌   |
 |          | - Ajout de l'association 1-N entre membre et ses inventaires (optionnellement 1-1)                      |                         |                              |  ❌   |
